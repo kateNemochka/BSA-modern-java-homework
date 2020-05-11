@@ -19,7 +19,6 @@ public final class DefenciveSubsystemBuilder {
 	public static DefenciveSubsystemBuilder named(String name) {
 		DefenciveSubsystemBuilder builder = new DefenciveSubsystemBuilder();
 		builder.name = name;
-
 		return builder;
 	}
 

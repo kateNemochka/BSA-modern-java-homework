@@ -10,13 +10,16 @@ public final class DepartmentMaxDepth {
 	}
 
 	public static Integer calculateMaxDepth(Department rootDepartment) {
-		Department department = rootDepartment;
-		if (department.subDepartments.size() == 0)
+		if (rootDepartment == null) {
 			return 0;
+		}
+		else if (rootDepartment.subDepartments.size() == 0) {
+			return 1;
+		}
 		else
 		{
 			List<Integer> depths = new ArrayList<>();
-			for (Department subDepartment : department.subDepartments) {
+			for (Department subDepartment : rootDepartment.subDepartments) {
 				depths.add(calculateMaxDepth(subDepartment));
 			}
 			return Collections.max(depths) + 1;

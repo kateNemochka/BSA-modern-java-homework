@@ -17,7 +17,7 @@ public final class DefenciveSubsystemBuilder {
 	private PositiveInteger pgRequirement;
 
 	public static DefenciveSubsystemBuilder named(String name) {
-		var builder = new DefenciveSubsystemBuilder();
+		DefenciveSubsystemBuilder builder = new DefenciveSubsystemBuilder();
 		builder.name = name;
 
 		return builder;

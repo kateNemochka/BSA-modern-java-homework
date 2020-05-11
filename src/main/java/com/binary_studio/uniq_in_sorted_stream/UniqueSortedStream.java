@@ -8,8 +8,7 @@ public final class UniqueSortedStream {
 	}
 
 	public static <T> Stream<Row<T>> uniqueRowsSortedByPK(Stream<Row<T>> stream) {
-
-		return null;
+		return stream.distinct();
 	}
 
 }
